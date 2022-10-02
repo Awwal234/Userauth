@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% block title %}Brim Login{% endblock %}
+{% block main %}
+<form action="{{ url_for('login') }}" method="POST">
+    <div class="mt-[100px] mx-auto w-[80%]">
+        <div class="log_text font-[500] text-[#fff] text-[35px] text-center">Login</div>
+        <div class="text-left">
+            <div><label for="email">Email</label></div>
+            <div><input type="email" placeholder="Type in your email"
+                    class="py-[16px] px-[12px] plceholder:text-[13px] border w-full plceholder:text-gray-200"
+                    name="email" id="email" /></div>
+        </div>
+        <!--password input-->
+        <div class="mt-[20px]"><label for="password">Password</label></div>
+        <div><input type="password" placeholder="Type in your password"
+                class="py-[16px] px-[12px] plceholder:text-[13px] border w-full plceholder:text-gray-200"
+                name="password" id="password" />
+        </div>
+        <!--submit btn-->
+        <button type="submit"
+            class="mt-[20px] bg-[indigo] rounded-[5px] py-[10px] font-[500] text-[14px] px-[25px] text-[#fff]">
+            Login
+        </button>
+    </div>
+</form>
+<!--end input-->
+</div>
+
+<style>
+    .log_text {
+        -webkit-text-stroke: 0.6px indigo;
+    }
+
+    input:focus {
+        outline: none;
+    }
+</style>
+{% endblock %}

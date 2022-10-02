@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+    <title>{% block title %}Home Page{% endblock %}</title>
+</head>
+
+<body>
+    {% block main %}
+    <header class="w-full bg-[#fff] items-center flex justify-between shadow-md p-[20px]">
+        <div class="text-[indigo] font-[600] text-[18px]">Brim</div>
+        <div class="text-[#000] font-[500] text-[14px] flex items-center space-x-[30px]">
+            <a href="">Home</a>
+            <a href={{ url_for('login') }}>Login</a>
+            <a href={{ url_for('signup') }}>Signup</a>
+        </div>
+    </header>
+    <div class="wel text-center font-[700] mt-[100px] text-[45px] text-[#fff]">Welcome to Brim</div>
+    {% endblock %}
+</body>
+
+<style>
+    body {
+        font-family: 'Ropa Sans', sans-serif;
+    }
+
+    .wel {
+        -webkit-text-stroke: 0.3px indigo;
+    }
+</style>
+
+</html>
